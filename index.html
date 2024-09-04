@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="index.css">
+
+    <script>
+        function displayMe(text)
+        {
+            var namevalue = document.getElementById('name').value;
+
+            var ipigrade = document.getElementById('ipi').value;
+            var imigrade = document.getElementById('imi').value;
+            var oopgrade = document.getElementById('oop').value;
+            var edpgrade = document.getElementById('edp').value;
+            var hc2grade = document.getElementById('hc2').value;
+
+            var totalgrades = Number(ipigrade) + Number(imigrade) + Number(oopgrade) + Number(edpgrade) + Number(hc2grade);
+            var average = totalgrades / 5;
+            
+            alert("Name: " + namevalue + "\nIPI: " + ipigrade + "\nIMI: " + imigrade + "\nOOP: " + oopgrade + "\nEDP: " + edpgrade + "\nHC2: " + hc2grade + "\nAverage: " + average);
+
+        }
+    </script>
+</head>
+<body>
+
+    <div class="calcu">
+        <div class="input">
+
+            <b>Name: </b> <input type="string" id="name"> <br>
+            <b>GRADE:</b> <br>
+            <b>IPI: </b> <input type="string" id="ipi"> <br>
+            <b>IMI: </b> <input type="string" id="imi"> <br>
+            <b>OOP: </b> <input type="string" id="oop"> <br>
+            <b>EDP: </b> <input type="string" id="edp"> <br>
+            <b>HC2: </b> <input type="string" id="hc2"> <br>
+
+            <button onclick="displayMe()"><b>COMPUTE</b></button>
+
+        </div>
+    </div>
+    
+</body>
+</html>
